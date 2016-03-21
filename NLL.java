@@ -10,9 +10,10 @@ public class NLL implements FCNBase {
     private Funk func;
     private double sum;
 
-    public NLL(Matrix in) {
+    public NLL(Matrix in, Funk function) {
 
 	x = in.copy();
+	func = function;
 
     }
 
@@ -25,7 +26,7 @@ public class NLL implements FCNBase {
 	for (int i = 0; i<x.getRowDimension(); i++) {
 
 	    sum = sum - Math.log(func.valueOf(x.get(i,0)));
-
+	    
 	}
 
 	return sum;
