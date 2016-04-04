@@ -18,6 +18,8 @@ public class DoubleExp implements Funk{
 
     }
 
+    public DoubleExp() {}
+
     //Sets the parameters
     public void setParameters(double[] par) {
 
